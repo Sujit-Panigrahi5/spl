@@ -19,7 +19,7 @@
 
 <body class="overflow-x-hidden-hidden">
     <!-- navbar -->
-    <nav class="flex flex-row justify-between items-center py-3  lg:px-20 px-2">
+    <nav class="flex flex-row justify-between items-center py-3  lg:px-20 px-2 shadow-2xl shadow-slate-700">
         <!-- logo  -->
         <div class="w-32 h-16 ">
             <img src="https://spl.live/static/media/Spl-logo.c36d830b96137f5791c0.png" alt="img" class="w-full h-full">
@@ -27,15 +27,15 @@
         <!-- navigate item  -->
         <div class="flex flex-row items-center gap-8 hidden lg:block lg:flex">
             <button
-                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100">HOME</button>
+                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100" id="home" onclick="homescreen()" >HOME</button>
             <button
-                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100">RATE
+                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100" id="ratechart" onclick="showstarlinechat()" >RATE
                 CHARTS</button>
             <button
-                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100">MARKET
+                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100" id="market" onclick="marketresult()" >MARKET
                 RESULT</button>
             <button
-                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100">STARLINE
+                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100" id="starline" >STARLINE
                 CHARTS</button>
         </div>
         <div class="lg:hidden  border-[2px] border-slate-600 p-2 rounded-lg hover:border-4 border-slate-900 ">
@@ -45,15 +45,17 @@
 
     <!-- introduction section -->
 
-    <div class="flex flex-row justify-between items-center h-[34rem] px-32  bg-[rgb(94,0,132)]  mb-14">
+    <div class="flex flex-col lg:flex-row justify-between items-center lg:h-[34rem] lg:px-32  bg-[rgb(94,0,132)]  mb-14"  id="introduction">
         <div class="flex flex-col justify-center items-start text-white -mt-10 ">
-            <div class="flex flex-col justify-center items-start">
-                <span class="text-2xl">Welcome to your</span>
-                <h1 class="text-[5rem] font-bold text-yellow-500 ">Most Trusted app </h1>
-                <span class="text-[1.7rem]">Play instant Online Matka with SPL Live & win Money Dail!</span>
+
+            <div class="flex flex-col justify-center lg:items-start items-center lg:gap-9 py-12">
+                <span class="lg:text-2xl text-2xl">Welcome to your</span>
+                <h1 class="lg:text-[5rem] font-bold text-yellow-500 text-4xl">Most Trusted app </h1>
+                <span class="lg:text-[1.7rem] ">Play instant Online Matka with SPL Live & win Money Dail!</span>
             </div>
+
             <div
-                class="flex flex-row justify-center items-center  ml-32 mt-16  rounded-full border-2 border-white animate-bounce db ">
+                class="flex flex-row justify-center items-center ml-10 lg:ml-32 mt-16  rounded-full border-2 border-white animate-bounce db ">
                 <!-- <img src="./assets/btn-shade.f0059b72257099419f70.png" alt="" class=" absolute z-30 top-1 left-1 overflow-hidden "> -->
                 <button
                     class="items-center m-1 text-black py-[0.7rem] px-[4rem] rounded-full  text-[1.3rem] font-bold z-20 bg-yellow-400 relative overflow-hidden">
@@ -68,7 +70,7 @@
     </div>
 
     <!-- Contant information  -->
-    <div class="w-full flex flex-col justify-start items-center my-7 gap-7  ">
+    <div class="w-full flex flex-col justify-start items-center my-7 gap-7  " id="conant">
         <div
             class="w-[80%]  flex flex-row justify-center items-center bg-gradient-to-r from-[rgb(223,64,6)] to-[rgb(247,141,24)] py-[0.7rem] rounded-full ">
             <span class="text-white text-2xl">Contant Us</span>
@@ -92,7 +94,7 @@
     </div>
 
 
-    <div class="w-full flex flex-row justify-center items-center my-4 py-12 ">
+    <div class="w-full flex flex-row justify-center items-center my-4 py-12 flex-wrap " id="starlinechat" >
         <div class="flex flex-col justify-normal items-center w-[90%]   ">
             <div class="flex flex-col justify-start items-center">
                 <span class="text-[rgb(0,54,92)] text-3xl font-bold">Online <span
@@ -105,7 +107,7 @@
                 </div>
             </div>
             <span class="my-6 text-3xl text-[rgb(238,80,45)] font-bold ">STARLINE RATE</span>
-            <div class="w-full flex flex-row justify-around items-center">
+            <div class="w-full flex flex-row justify-around items-center flex-wrap gap-6">
 
                 <div class="w-72 h-24  rounded-3xl card flex flex-row justify-center items-center shadow-2xl">
                     <div class="w-[95%] bg-white h-[85%] rounded-3xl flex flex-row justify-center items-center">
@@ -294,7 +296,8 @@
         </div>
     </div>
 
-    <div class="w-full flex flex-row flex-wrap justify-around items-center h-64  bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)] my-12">
+    <div class="w-full flex flex-col lg:flex-row flex-wrap justify-around items-center  lg:h-64  bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)] my-12" id="deposite">
+
         <div class="flex flex-row justify-center items-center gap-3 w-[23%] h-40 ">
 
             <img src="./assets/minimum_Deposit.svg" alt="">
@@ -346,8 +349,8 @@
 
     </div>
 
-    <div class="w-full flex flex-row justify-center items-center my-10 py-12 ">
-        <div class="flex flex-col justify-normal items-center w-[90%] gap-6 ">
+    <div class="w-full flex flex-row justify-center items-center my-10 py-12 " id="marketplay">
+        <div class="flex flex-col justify-normal items-center w-[90%] gap-6 flex-wrap ">
             <div class="flex flex-col justify-start items-center">
                 <span class="text-[rgb(0,54,92)] text-3xl font-bold">Market <span
                         class="text-[rgb(225,0,198)] text-3xl">Play</span> Result </span>
@@ -359,8 +362,9 @@
                 </div>
             </div>
 
-            <div class="flex flex-row justify-around items-center flex-wrap w-full ">
-                <div class="flex flex-row justify-around items-center flex-wrap w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+            <div class="flex flex-col lg:flex-row justify-around items-center flex-wrap w-full gap-6">
+
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
 
                     <div class="flex flex-col justify-start items-center w-full h-full">
     
@@ -407,7 +411,7 @@
     
                 </div>
 
-                <div class="flex flex-row justify-around items-center flex-wrap w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
 
                     <div class="flex flex-col justify-start items-center w-full h-full">
     
@@ -454,7 +458,54 @@
     
                 </div>
 
-                <div class="flex flex-row justify-around items-center flex-wrap w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+
+                    <div class="flex flex-col justify-start items-center w-full h-full">
+    
+                        <div class="flex flex-row justify-between items-start w-full  h-[70%] rounded-t-2xl">
+    
+                            <span class="text-2xl font-bold mt-3 ml-3">Time Bazar </span>
+    
+                            <div class="flex flex-col justify-around items-center w-[60%] border-2 border-white ">
+    
+                                <div class="flex flex-row justify-around items-center w-full  ">
+    
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Open Time
+                                        </span>
+                                        <span>12:55 PM</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Close Time
+                                        </span>
+                                        <span>1:50 PM</span>
+                                    </div>
+    
+                                </div>
+    
+                                <span class="text-2xl text-[rgb(238,80,45)] font-bold">235 <span class="text-black text-2xl">-</span>
+                                    04 <span class="text-black text-2xl">-</span> 789</span>
+                            </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-play text-2xl bg-red-600 py-3 px-4 rounded-full cursor-pointer absolute left-[3.5rem] bottom-8 bg-gradient-to-r from-slate-500 to-slate-700 text-white"></i>
+    
+    
+                        <div class="flex flex-row justify-around items-center gap-6 w-full bg-purple-300 h-[30%] rounded-b-2xl bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)]   text-white">
+                            <span class="text-sm font-bold">Play now </span>
+                            <div class="flex flex-row justify-center items-center gap-5 text-[17px] font-bold">
+                                <span>Jodi Chart</span>
+                                <span>|</span>
+                                <span>Panel Chart</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
 
                     <div class="flex flex-col justify-start items-center w-full h-full">
     
@@ -501,15 +552,794 @@
     
                 </div>
 
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+
+                    <div class="flex flex-col justify-start items-center w-full h-full">
+    
+                        <div class="flex flex-row justify-between items-start w-full  h-[70%] rounded-t-2xl">
+    
+                            <span class="text-2xl font-bold mt-3 ml-3">Milan Morning </span>
+    
+                            <div class="flex flex-col justify-around items-center w-[60%] border-2 border-white ">
+    
+                                <div class="flex flex-row justify-around items-center w-full  ">
+    
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Open Time
+                                        </span>
+                                        <span>10:20 AM</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Close Time
+                                        </span>
+                                        <span>11:20 AM</span>
+                                    </div>
+    
+                                </div>
+    
+                                <span class="text-2xl text-[rgb(238,80,45)] font-bold">235 <span class="text-black text-2xl">-</span>
+                                    04 <span class="text-black text-2xl">-</span> 789</span>
+                            </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-play text-2xl bg-red-600 py-3 px-4 rounded-full cursor-pointer absolute left-[3.5rem] bottom-8 bg-gradient-to-r from-slate-500 to-slate-700 text-white"></i>
+    
+    
+                        <div class="flex flex-row justify-around items-center gap-6 w-full bg-purple-300 h-[30%] rounded-b-2xl bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)]   text-white">
+                            <span class="text-sm font-bold">Play now </span>
+                            <div class="flex flex-row justify-center items-center gap-5 text-[17px] font-bold">
+                                <span>Jodi Chart</span>
+                                <span>|</span>
+                                <span>Panel Chart</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+
+                    <div class="flex flex-col justify-start items-center w-full h-full">
+    
+                        <div class="flex flex-row justify-between items-start w-full  h-[70%] rounded-t-2xl">
+    
+                            <span class="text-2xl font-bold mt-3 ml-3">Milan Morning </span>
+    
+                            <div class="flex flex-col justify-around items-center w-[60%] border-2 border-white ">
+    
+                                <div class="flex flex-row justify-around items-center w-full  ">
+    
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Open Time
+                                        </span>
+                                        <span>10:20 AM</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Close Time
+                                        </span>
+                                        <span>11:20 AM</span>
+                                    </div>
+    
+                                </div>
+    
+                                <span class="text-2xl text-[rgb(238,80,45)] font-bold">235 <span class="text-black text-2xl">-</span>
+                                    04 <span class="text-black text-2xl">-</span> 789</span>
+                            </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-play text-2xl bg-red-600 py-3 px-4 rounded-full cursor-pointer absolute left-[3.5rem] bottom-8 bg-gradient-to-r from-slate-500 to-slate-700 text-white"></i>
+    
+    
+                        <div class="flex flex-row justify-around items-center gap-6 w-full bg-purple-300 h-[30%] rounded-b-2xl bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)]   text-white">
+                            <span class="text-sm font-bold">Play now </span>
+                            <div class="flex flex-row justify-center items-center gap-5 text-[17px] font-bold">
+                                <span>Jodi Chart</span>
+                                <span>|</span>
+                                <span>Panel Chart</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+
+                    <div class="flex flex-col justify-start items-center w-full h-full">
+    
+                        <div class="flex flex-row justify-between items-start w-full  h-[70%] rounded-t-2xl">
+    
+                            <span class="text-2xl font-bold mt-3 ml-3">Milan Morning </span>
+    
+                            <div class="flex flex-col justify-around items-center w-[60%] border-2 border-white ">
+    
+                                <div class="flex flex-row justify-around items-center w-full  ">
+    
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Open Time
+                                        </span>
+                                        <span>10:20 AM</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Close Time
+                                        </span>
+                                        <span>11:20 AM</span>
+                                    </div>
+    
+                                </div>
+    
+                                <span class="text-2xl text-[rgb(238,80,45)] font-bold">235 <span class="text-black text-2xl">-</span>
+                                    04 <span class="text-black text-2xl">-</span> 789</span>
+                            </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-play text-2xl bg-red-600 py-3 px-4 rounded-full cursor-pointer absolute left-[3.5rem] bottom-8 bg-gradient-to-r from-slate-500 to-slate-700 text-white"></i>
+    
+    
+                        <div class="flex flex-row justify-around items-center gap-6 w-full bg-purple-300 h-[30%] rounded-b-2xl bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)]   text-white">
+                            <span class="text-sm font-bold">Play now </span>
+                            <div class="flex flex-row justify-center items-center gap-5 text-[17px] font-bold">
+                                <span>Jodi Chart</span>
+                                <span>|</span>
+                                <span>Panel Chart</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+
+                    <div class="flex flex-col justify-start items-center w-full h-full">
+    
+                        <div class="flex flex-row justify-between items-start w-full  h-[70%] rounded-t-2xl">
+    
+                            <span class="text-2xl font-bold mt-3 ml-3">Milan Morning </span>
+    
+                            <div class="flex flex-col justify-around items-center w-[60%] border-2 border-white ">
+    
+                                <div class="flex flex-row justify-around items-center w-full  ">
+    
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Open Time
+                                        </span>
+                                        <span>10:20 AM</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Close Time
+                                        </span>
+                                        <span>11:20 AM</span>
+                                    </div>
+    
+                                </div>
+    
+                                <span class="text-2xl text-[rgb(238,80,45)] font-bold">235 <span class="text-black text-2xl">-</span>
+                                    04 <span class="text-black text-2xl">-</span> 789</span>
+                            </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-play text-2xl bg-red-600 py-3 px-4 rounded-full cursor-pointer absolute left-[3.5rem] bottom-8 bg-gradient-to-r from-slate-500 to-slate-700 text-white"></i>
+    
+    
+                        <div class="flex flex-row justify-around items-center gap-6 w-full bg-purple-300 h-[30%] rounded-b-2xl bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)]   text-white">
+                            <span class="text-sm font-bold">Play now </span>
+                            <div class="flex flex-row justify-center items-center gap-5 text-[17px] font-bold">
+                                <span>Jodi Chart</span>
+                                <span>|</span>
+                                <span>Panel Chart</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+
+                    <div class="flex flex-col justify-start items-center w-full h-full">
+    
+                        <div class="flex flex-row justify-between items-start w-full  h-[70%] rounded-t-2xl">
+    
+                            <span class="text-2xl font-bold mt-3 ml-3">Milan Morning </span>
+    
+                            <div class="flex flex-col justify-around items-center w-[60%] border-2 border-white ">
+    
+                                <div class="flex flex-row justify-around items-center w-full  ">
+    
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Open Time
+                                        </span>
+                                        <span>10:20 AM</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Close Time
+                                        </span>
+                                        <span>11:20 AM</span>
+                                    </div>
+    
+                                </div>
+    
+                                <span class="text-2xl text-[rgb(238,80,45)] font-bold">235 <span class="text-black text-2xl">-</span>
+                                    04 <span class="text-black text-2xl">-</span> 789</span>
+                            </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-play text-2xl bg-red-600 py-3 px-4 rounded-full cursor-pointer absolute left-[3.5rem] bottom-8 bg-gradient-to-r from-slate-500 to-slate-700 text-white"></i>
+    
+    
+                        <div class="flex flex-row justify-around items-center gap-6 w-full bg-purple-300 h-[30%] rounded-b-2xl bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)]   text-white">
+                            <span class="text-sm font-bold">Play now </span>
+                            <div class="flex flex-row justify-center items-center gap-5 text-[17px] font-bold">
+                                <span>Jodi Chart</span>
+                                <span>|</span>
+                                <span>Panel Chart</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+
+                    <div class="flex flex-col justify-start items-center w-full h-full">
+    
+                        <div class="flex flex-row justify-between items-start w-full  h-[70%] rounded-t-2xl">
+    
+                            <span class="text-2xl font-bold mt-3 ml-3">Milan Morning </span>
+    
+                            <div class="flex flex-col justify-around items-center w-[60%] border-2 border-white ">
+    
+                                <div class="flex flex-row justify-around items-center w-full  ">
+    
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Open Time
+                                        </span>
+                                        <span>10:20 AM</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Close Time
+                                        </span>
+                                        <span>11:20 AM</span>
+                                    </div>
+    
+                                </div>
+    
+                                <span class="text-2xl text-[rgb(238,80,45)] font-bold">235 <span class="text-black text-2xl">-</span>
+                                    04 <span class="text-black text-2xl">-</span> 789</span>
+                            </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-play text-2xl bg-red-600 py-3 px-4 rounded-full cursor-pointer absolute left-[3.5rem] bottom-8 bg-gradient-to-r from-slate-500 to-slate-700 text-white"></i>
+    
+    
+                        <div class="flex flex-row justify-around items-center gap-6 w-full bg-purple-300 h-[30%] rounded-b-2xl bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)]   text-white">
+                            <span class="text-sm font-bold">Play now </span>
+                            <div class="flex flex-row justify-center items-center gap-5 text-[17px] font-bold">
+                                <span>Jodi Chart</span>
+                                <span>|</span>
+                                <span>Panel Chart</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+
+                    <div class="flex flex-col justify-start items-center w-full h-full">
+    
+                        <div class="flex flex-row justify-between items-start w-full  h-[70%] rounded-t-2xl">
+    
+                            <span class="text-2xl font-bold mt-3 ml-3">Milan Morning </span>
+    
+                            <div class="flex flex-col justify-around items-center w-[60%] border-2 border-white ">
+    
+                                <div class="flex flex-row justify-around items-center w-full  ">
+    
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Open Time
+                                        </span>
+                                        <span>10:20 AM</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Close Time
+                                        </span>
+                                        <span>11:20 AM</span>
+                                    </div>
+    
+                                </div>
+    
+                                <span class="text-2xl text-[rgb(238,80,45)] font-bold">235 <span class="text-black text-2xl">-</span>
+                                    04 <span class="text-black text-2xl">-</span> 789</span>
+                            </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-play text-2xl bg-red-600 py-3 px-4 rounded-full cursor-pointer absolute left-[3.5rem] bottom-8 bg-gradient-to-r from-slate-500 to-slate-700 text-white"></i>
+    
+    
+                        <div class="flex flex-row justify-around items-center gap-6 w-full bg-purple-300 h-[30%] rounded-b-2xl bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)]   text-white">
+                            <span class="text-sm font-bold">Play now </span>
+                            <div class="flex flex-row justify-center items-center gap-5 text-[17px] font-bold">
+                                <span>Jodi Chart</span>
+                                <span>|</span>
+                                <span>Panel Chart</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+
+                    <div class="flex flex-col justify-start items-center w-full h-full">
+    
+                        <div class="flex flex-row justify-between items-start w-full  h-[70%] rounded-t-2xl">
+    
+                            <span class="text-2xl font-bold mt-3 ml-3">Milan Morning </span>
+    
+                            <div class="flex flex-col justify-around items-center w-[60%] border-2 border-white ">
+    
+                                <div class="flex flex-row justify-around items-center w-full  ">
+    
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Open Time
+                                        </span>
+                                        <span>10:20 AM</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Close Time
+                                        </span>
+                                        <span>11:20 AM</span>
+                                    </div>
+    
+                                </div>
+    
+                                <span class="text-2xl text-[rgb(238,80,45)] font-bold">235 <span class="text-black text-2xl">-</span>
+                                    04 <span class="text-black text-2xl">-</span> 789</span>
+                            </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-play text-2xl bg-red-600 py-3 px-4 rounded-full cursor-pointer absolute left-[3.5rem] bottom-8 bg-gradient-to-r from-slate-500 to-slate-700 text-white"></i>
+    
+    
+                        <div class="flex flex-row justify-around items-center gap-6 w-full bg-purple-300 h-[30%] rounded-b-2xl bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)]   text-white">
+                            <span class="text-sm font-bold">Play now </span>
+                            <div class="flex flex-row justify-center items-center gap-5 text-[17px] font-bold">
+                                <span>Jodi Chart</span>
+                                <span>|</span>
+                                <span>Panel Chart</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+
+                    <div class="flex flex-col justify-start items-center w-full h-full">
+    
+                        <div class="flex flex-row justify-between items-start w-full  h-[70%] rounded-t-2xl">
+    
+                            <span class="text-2xl font-bold mt-3 ml-3">Milan Morning </span>
+    
+                            <div class="flex flex-col justify-around items-center w-[60%] border-2 border-white ">
+    
+                                <div class="flex flex-row justify-around items-center w-full  ">
+    
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Open Time
+                                        </span>
+                                        <span>10:20 AM</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Close Time
+                                        </span>
+                                        <span>11:20 AM</span>
+                                    </div>
+    
+                                </div>
+    
+                                <span class="text-2xl text-[rgb(238,80,45)] font-bold">235 <span class="text-black text-2xl">-</span>
+                                    04 <span class="text-black text-2xl">-</span> 789</span>
+                            </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-play text-2xl bg-red-600 py-3 px-4 rounded-full cursor-pointer absolute left-[3.5rem] bottom-8 bg-gradient-to-r from-slate-500 to-slate-700 text-white"></i>
+    
+    
+                        <div class="flex flex-row justify-around items-center gap-6 w-full bg-purple-300 h-[30%] rounded-b-2xl bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)]   text-white">
+                            <span class="text-sm font-bold">Play now </span>
+                            <div class="flex flex-row justify-center items-center gap-5 text-[17px] font-bold">
+                                <span>Jodi Chart</span>
+                                <span>|</span>
+                                <span>Panel Chart</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+
+                    <div class="flex flex-col justify-start items-center w-full h-full">
+    
+                        <div class="flex flex-row justify-between items-start w-full  h-[70%] rounded-t-2xl">
+    
+                            <span class="text-2xl font-bold mt-3 ml-3">Milan Morning </span>
+    
+                            <div class="flex flex-col justify-around items-center w-[60%] border-2 border-white ">
+    
+                                <div class="flex flex-row justify-around items-center w-full  ">
+    
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Open Time
+                                        </span>
+                                        <span>10:20 AM</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Close Time
+                                        </span>
+                                        <span>11:20 AM</span>
+                                    </div>
+    
+                                </div>
+    
+                                <span class="text-2xl text-[rgb(238,80,45)] font-bold">235 <span class="text-black text-2xl">-</span>
+                                    04 <span class="text-black text-2xl">-</span> 789</span>
+                            </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-play text-2xl bg-red-600 py-3 px-4 rounded-full cursor-pointer absolute left-[3.5rem] bottom-8 bg-gradient-to-r from-slate-500 to-slate-700 text-white"></i>
+    
+    
+                        <div class="flex flex-row justify-around items-center gap-6 w-full bg-purple-300 h-[30%] rounded-b-2xl bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)]   text-white">
+                            <span class="text-sm font-bold">Play now </span>
+                            <div class="flex flex-row justify-center items-center gap-5 text-[17px] font-bold">
+                                <span>Jodi Chart</span>
+                                <span>|</span>
+                                <span>Panel Chart</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+
+                    <div class="flex flex-col justify-start items-center w-full h-full">
+    
+                        <div class="flex flex-row justify-between items-start w-full  h-[70%] rounded-t-2xl">
+    
+                            <span class="text-2xl font-bold mt-3 ml-3">Milan Morning </span>
+    
+                            <div class="flex flex-col justify-around items-center w-[60%] border-2 border-white ">
+    
+                                <div class="flex flex-row justify-around items-center w-full  ">
+    
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Open Time
+                                        </span>
+                                        <span>10:20 AM</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Close Time
+                                        </span>
+                                        <span>11:20 AM</span>
+                                    </div>
+    
+                                </div>
+    
+                                <span class="text-2xl text-[rgb(238,80,45)] font-bold">235 <span class="text-black text-2xl">-</span>
+                                    04 <span class="text-black text-2xl">-</span> 789</span>
+                            </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-play text-2xl bg-red-600 py-3 px-4 rounded-full cursor-pointer absolute left-[3.5rem] bottom-8 bg-gradient-to-r from-slate-500 to-slate-700 text-white"></i>
+    
+    
+                        <div class="flex flex-row justify-around items-center gap-6 w-full bg-purple-300 h-[30%] rounded-b-2xl bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)]   text-white">
+                            <span class="text-sm font-bold">Play now </span>
+                            <div class="flex flex-row justify-center items-center gap-5 text-[17px] font-bold">
+                                <span>Jodi Chart</span>
+                                <span>|</span>
+                                <span>Panel Chart</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+
+                    <div class="flex flex-col justify-start items-center w-full h-full">
+    
+                        <div class="flex flex-row justify-between items-start w-full  h-[70%] rounded-t-2xl">
+    
+                            <span class="text-2xl font-bold mt-3 ml-3">Milan Morning </span>
+    
+                            <div class="flex flex-col justify-around items-center w-[60%] border-2 border-white ">
+    
+                                <div class="flex flex-row justify-around items-center w-full  ">
+    
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Open Time
+                                        </span>
+                                        <span>10:20 AM</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Close Time
+                                        </span>
+                                        <span>11:20 AM</span>
+                                    </div>
+    
+                                </div>
+    
+                                <span class="text-2xl text-[rgb(238,80,45)] font-bold">235 <span class="text-black text-2xl">-</span>
+                                    04 <span class="text-black text-2xl">-</span> 789</span>
+                            </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-play text-2xl bg-red-600 py-3 px-4 rounded-full cursor-pointer absolute left-[3.5rem] bottom-8 bg-gradient-to-r from-slate-500 to-slate-700 text-white"></i>
+    
+    
+                        <div class="flex flex-row justify-around items-center gap-6 w-full bg-purple-300 h-[30%] rounded-b-2xl bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)]   text-white">
+                            <span class="text-sm font-bold">Play now </span>
+                            <div class="flex flex-row justify-center items-center gap-5 text-[17px] font-bold">
+                                <span>Jodi Chart</span>
+                                <span>|</span>
+                                <span>Panel Chart</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="flex flex-row justify-around items-center flex-wrap w-full lg:w-[38%] h-40 rounded-2xl  bg-white shadow-lg shadow-slate-700 border-t-2  relative">
+
+                    <div class="flex flex-col justify-start items-center w-full h-full">
+    
+                        <div class="flex flex-row justify-between items-start w-full  h-[70%] rounded-t-2xl">
+    
+                            <span class="text-2xl font-bold mt-3 ml-3">Milan Morning </span>
+    
+                            <div class="flex flex-col justify-around items-center w-[60%] border-2 border-white ">
+    
+                                <div class="flex flex-row justify-around items-center w-full  ">
+    
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Open Time
+                                        </span>
+                                        <span>10:20 AM</span>
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center">
+                                        <span class="text-xl">
+                                            Close Time
+                                        </span>
+                                        <span>11:20 AM</span>
+                                    </div>
+    
+                                </div>
+    
+                                <span class="text-2xl text-[rgb(238,80,45)] font-bold">235 <span class="text-black text-2xl">-</span>
+                                    04 <span class="text-black text-2xl">-</span> 789</span>
+                            </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-play text-2xl bg-red-600 py-3 px-4 rounded-full cursor-pointer absolute left-[3.5rem] bottom-8 bg-gradient-to-r from-slate-500 to-slate-700 text-white"></i>
+    
+    
+                        <div class="flex flex-row justify-around items-center gap-6 w-full bg-purple-300 h-[30%] rounded-b-2xl bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)]   text-white">
+                            <span class="text-sm font-bold">Play now </span>
+                            <div class="flex flex-row justify-center items-center gap-5 text-[17px] font-bold">
+                                <span>Jodi Chart</span>
+                                <span>|</span>
+                                <span>Panel Chart</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+
+
+
+
+
             </div>
 
-            
+        </div>
+
+    </div>
+
+    <div class="w-full my-10  flex flex-row justify-center items-center" id="starlineresult">
+        <div class="flex flex-col justify-normal items-center w-[90%] gap-6">
+            <div class="flex flex-col justify-start items-center">
+                <span class="text-[rgb(0,54,92)] text-3xl font-bold">Online <span
+                        class="text-[rgb(225,0,198)] text-3xl">StarLine</span> Result </span>
+                <div class="flex flex-row justify-center items-center">
+                    <div class="w-3 h-3 bg-[rgb(255,155,0)] rotate-45"></div>
+                    <hr class="w-80 h-1 bg-[rgb(255,155,0)]">
+                    </hr>
+                    <div class="w-3 h-3 bg-[rgb(255,155,0)] rotate-45"></div>
+                </div>
+            </div>
+
+            <span class="text-2xl">3 july 2024</span>
+
+            <div class="w-full flex flex-row justify-around items-center flex-wrap gap-10">
+                <div class="w-[35rem] flex flex-row justify-around items-center bg-slate-300 py-8 rounded-3xl ">
+
+                    <div class=" w-[50%] h-full border-r-2 border-slate-700 flex flex-col justify-start items-center  relative ">
+                        <div class="flex flex-row justify-center items-center w-44 h-10 bg-[rgb(185,3,172)] border-[1.5px] border-red-600 absolute -top-12 z-30 text-2xl text-white">
+                            Time
+                        </div>
+                        
+                        <i class="fa-solid fa-caret-up text-[rgb(88,0,132)] text-[2.8rem] absolute top-[-3.7rem] lg:left-9 left-5"></i>
+                        <i class="fa-solid fa-caret-up text-[rgb(88,0,132)] text-[2.8rem] absolute top-[-3.7rem] lg:left-[13.3rem] left-[12.5rem]"></i>
+
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(0,54,92)]  text-xl font-bold">
+                            10:00 AM
+                        </div>
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(0,54,92)] text-xl font-bold">
+                            10:00 AM
+                        </div>
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(0,54,92)]  text-xl font-bold">
+                            10:00 AM
+                        </div>
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(0,54,92)] text-xl font-bold">
+                            10:00 AM
+                        </div>
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(0,54,92)] text-xl font-bold">
+                            10:00 AM
+                        </div>
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center text-xl text-[rgb(0,54,92)] font-bold">
+                            10:00 AM
+                        </div>
+                    </div>
+
+                    <div class=" w-[50%] h-full  flex flex-col justify-start items-center relative ">
+
+                        <div class="flex flex-row justify-center items-center w-44 h-10 bg-[rgb(185,3,172)] border-[1.5px] border-red-600 absolute -top-12 z-30 text-2xl text-white">
+                            Result
+                        </div>
+                        
+                        <i class="fa-solid fa-caret-up text-[rgb(88,0,132)] text-[2.8rem] absolute top-[-3.7rem] lg:left-9 left-6"></i>
+                        <i class="fa-solid fa-caret-up text-[rgb(88,0,132)] text-[2.8rem] absolute top-[-3.7rem] lg:left-[13.3rem] left-[12.5rem] "></i>
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(238,80,45)] font-bold text-xl">
+                            770 <span class="text-[rgb(0,54,92)] px-2 text-xl"> - </span> 4
+                        </div>
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(238,80,45)] font-bold text-xl">
+                            770 <span class="text-[rgb(0,54,92)] px-2 text-xl"> - </span> 4
+                        </div>
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(238,80,45)] font-bold text-xl">
+                            770 <span class="text-[rgb(0,54,92)] px-2 text-xl"> - </span> 4
+                        </div>
+
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(238,80,45)] font-bold text-xl">
+                            770 <span class="text-[rgb(0,54,92)] px-2 text-xl"> - </span> 4
+                        </div>
+
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(238,80,45)] font-bold text-xl">
+                            770 <span class="text-[rgb(0,54,92)] px-2 text-xl"> - </span> 4
+                        </div>
+
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center  text-[rgb(238,80,45)] font-bold text-xl">
+                            770 <span class="text-[rgb(0,54,92)] px-2 text-xl"> - </span> 4
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="w-[35rem] flex flex-row justify-around items-center bg-slate-300 py-8 rounded-3xl ">
+
+                    <div class=" w-[50%] h-full border-r-2 border-slate-700 flex flex-col justify-start items-center  relative ">
+                        <div class="flex flex-row justify-center items-center w-44 h-10 bg-[rgb(185,3,172)] border-[1.5px] border-red-600 absolute -top-12 z-30 text-2xl text-white">
+                            Time
+                        </div>
+                        
+                        <i class="fa-solid fa-caret-up text-[rgb(88,0,132)] text-[2.8rem] absolute top-[-3.7rem] lg:left-9 left-5"></i>
+                        <i class="fa-solid fa-caret-up text-[rgb(88,0,132)] text-[2.8rem] absolute top-[-3.7rem] lg:left-[13.3rem] left-[12.5rem]"></i>
+
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(0,54,92)]  text-xl font-bold">
+                            10:00 AM
+                        </div>
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(0,54,92)] text-xl font-bold">
+                            10:00 AM
+                        </div>
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(0,54,92)]  text-xl font-bold">
+                            10:00 AM
+                        </div>
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(0,54,92)] text-xl font-bold">
+                            10:00 AM
+                        </div>
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(0,54,92)] text-xl font-bold">
+                            10:00 AM
+                        </div>
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center text-xl text-[rgb(0,54,92)] font-bold">
+                            10:00 AM
+                        </div>
+                    </div>
+
+                    <div class=" w-[50%] h-full  flex flex-col justify-start items-center relative ">
+
+                        <div class="flex flex-row justify-center items-center w-44 h-10 bg-[rgb(185,3,172)] border-[1.5px] border-red-600 absolute -top-12 z-30 text-2xl text-white">
+                            Result
+                        </div>
+                        
+                        <i class="fa-solid fa-caret-up text-[rgb(88,0,132)] text-[2.8rem] absolute top-[-3.7rem] lg:left-9 left-6"></i>
+
+                        <i class="fa-solid fa-caret-up text-[rgb(88,0,132)] text-[2.8rem] absolute top-[-3.7rem] lg:left-[13.3rem] left-[12.5rem]"></i>
+
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(238,80,45)] font-bold text-xl">
+                            770 <span class="text-[rgb(0,54,92)] px-2 text-xl"> - </span> 4
+                        </div>
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(238,80,45)] font-bold text-xl">
+                            770 <span class="text-[rgb(0,54,92)] px-2 text-xl"> - </span> 4
+                        </div>
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(238,80,45)] font-bold text-xl">
+                            770 <span class="text-[rgb(0,54,92)] px-2 text-xl"> - </span> 4
+                        </div>
+
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(238,80,45)] font-bold text-xl">
+                            770 <span class="text-[rgb(0,54,92)] px-2 text-xl"> - </span> 4
+                        </div>
+
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center border-b-2 border-slate-400 text-[rgb(238,80,45)] font-bold text-xl">
+                            770 <span class="text-[rgb(0,54,92)] px-2 text-xl"> - </span> 4
+                        </div>
+
+                        <div class=" w-[80%] py-3 flex flex-row justify-center items-center  text-[rgb(238,80,45)] font-bold text-xl">
+                            770 <span class="text-[rgb(0,54,92)] px-2 text-xl"> - </span> 4
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div
+                class="flex flex-row justify-center items-center p-1 mt-16  rounded-lg border-2 border-orange-600  db ">
+                <!-- <img src="./assets/btn-shade.f0059b72257099419f70.png" alt="" class=" absolute z-30 top-1 left-1 overflow-hidden "> -->
+                <button
+                    class="items-center text-black py-[0.7rem] px-[4rem] rounded-lg  text-[1.3rem] font-bold z-20 bg-[rgb(237,79,44)] relative overflow-hidden">
+                    <img src="./assets/btn-shade.f0059b72257099419f70.png" alt=""
+                        class=" absolute z-30 -top-3 -left-2 h-12 overflow-hidden ">Chart Zone</button>
+            </div>
 
 
             
         </div>
-
     </div>
+
+    <footer class="w-full flex flex-row justify-around items-center flex-wrap">
+
+    </footer>
+    <script src="./script.js"></script>
+
 </body>
 
 </html>
