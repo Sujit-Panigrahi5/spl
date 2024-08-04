@@ -18,39 +18,89 @@
     </style>
 </head>
 
-<body class="overflow-x-hidden-hidden">
+<body class="overflow-x-hidden-hidden relative ">
+
+    <!-- <div class="h-[100vh] w-[100vw] flex flex-row justify-center items-center overflow-hidden " id="start1">
+        <div class="h-full w-full bg-red-500 flex flex-row justify-center items-center animate-ping overflow-hidden">
+            <img src="./assets/BE Logo 02.png " alt="" class="h-[50%] w-[50%]">
+        </div>
+    </div> -->
+
     <!-- navbar -->
-    <nav class="flex flex-row justify-between items-center py-3  lg:px-20 px-2 shadow-2xl shadow-slate-700">
+    <nav class="flex flex-row justify-between items-center py-3  lg:px-20 px-2 shadow-2xl shadow-slate-700 " id="navbar">
         <!-- logo  -->
-        <div class="w-32 h-16 ">
-            <img src="https://spl.live/static/media/Spl-logo.c36d830b96137f5791c0.png" alt="img" class="w-full h-full">
+        <div class="w-16 h-16 ">
+            <img src="./assets/BE Logo.png" alt="Logo" class="w-full h-full">
         </div>
         <!-- navigate item  -->
         <div class="flex flex-row items-center gap-8 hidden lg:block lg:flex">
             <button
-                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100"
+                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100 hover:border-2 hover:border-red-700 hover:px-3 hover:rounded-3xl hover:bg-[#a69ce2] hover:animate-bounce "
                 id="home" onclick="homescreen()">HOME</button>
             <button
-                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100"
+                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100 hover:border-2 hover:border-red-700 hover:px-5 hover:rounded-3xl hover:bg-[#a69ce2] hover:animate-bounce"
                 id="ratechart" onclick="showstarlinechat()">RATE
                 CHARTS</button>
             <button
-                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100"
+                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100 hover:border-2 hover:border-red-700 hover:px-5 hover:rounded-3xl hover:bg-[#a69ce2] hover:animate-bounce"
                 id="market" onclick="marketresult()">MARKET
                 RESULT</button>
             <button
-                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100"
+                class="cursor-pointer hover:text-orange-600 font-bold  text-slate-600 hover:scale-110 transition-all ease-in-out delay-100 hover:border-2 hover:border-red-700 hover:px-5 hover:rounded-3xl hover:bg-[#a69ce2] hover:animate-bounce"
                 id="starline">STARLINE
                 CHARTS</button>
         </div>
-        <div class="lg:hidden  border-[2px] border-slate-600 p-2 rounded-lg hover:border-4 border-slate-900 ">
-            <i class="fa-solid fa-bars text-3xl"></i>
+
+        <div class="lg:hidden  border-[2px] border-slate-600 p-2 rounded-lg hover:border-4 border-slate-900 lg:hidden  "  id="option" onclick="showpotions()" >
+            <i class="fa-solid fa-bars text-3xl" ></i>
         </div>
+
+        <div class="lg:hidden  border-[2px] border-slate-600 p-2 rounded-lg hover:border-4 border-slate-900  hidden "  id="option1" onclick="lesspotions()" >
+            <i class="fa-solid fa-xmark text-3xl"></i>
+        </div>
+
     </nav>
+
+
+    <!-- option section -->
+
+    <div class="flex flex-col justify-center items-center gap-5 w-56 h-56  bg-slate-300 absolute right-4 top-20 overflow-x-hidden z-30  rounded-3xl shadow-xl shadow-slate-700 hidden" id="options">
+        <div class=" w-[100%] flex flex-row justify-center rounded-3xl items-center  border-2 bg-slate-700 py-1"
+            id="parhome" onmousemove="showhome1()" onmouseout="donshow()">
+
+            <span
+                class=" flex flex-row justify-center items-center hover:bg-slate-700 hover: rounded-3xl hover:rounded-3xl hover:w-[50%] hover:text-white border-2 border-blue-600 px-6 bg-slate-300 text-sm "
+                id="homesm">HOME</span>
+        </div>
+
+        <div class=" w-[100%] flex flex-row justify-center rounded-3xl items-center  border-2 bg-slate-700 py-1 cursor-pointer "
+        id="ratechart0" onmousemove="showratechar()" onmouseout="donshow2()">
+
+            <span
+                class=" flex flex-row justify-center items-center  rounded-3xl border-2 border-blue-600 px-6 bg-slate-300 text-sm "
+                id="ratechart1">RATE CHARTS </span>
+        </div>
+
+        <div class=" w-[100%] flex flex-row justify-center rounded-3xl items-center  border-2 bg-slate-700 py-1 cursor-pointer "
+        id="market0" onmousemove="showmarket()" onmouseout="donshow3()">
+
+            <span
+                class=" flex flex-row justify-center items-center  rounded-3xl border-2 border-blue-600 px-6 bg-slate-300 text-sm "
+                id="market1">MARKET RESULT </span>
+        </div>
+
+        <div class=" w-[100%] flex flex-row justify-center rounded-3xl items-center  border-2 bg-slate-700 py-1 cursor-pointer "
+        id="starline0" onmousemove="showstarline()" onmouseout="donshow4()">
+
+            <span
+                class=" flex flex-row justify-center items-center  rounded-3xl border-2 border-blue-600 px-6 bg-slate-300 text-sm "
+                id="starline1">MARKET RESULT </span>
+        </div>
+    </div>
 
     <!-- introduction section -->
 
-    <div class="flex flex-col lg:flex-row justify-between items-center lg:h-[34rem] lg:px-32  bg-[rgb(94,0,132)]  mb-14"
+    <div class="flex flex-col lg:flex-row justify-between items-center lg:h-[34rem] lg:px-32  bg-[rgb(94,0,132)]  mb-14 relative "
         id="introduction">
         <div class="flex flex-col justify-center items-start text-white -mt-10 ">
 
@@ -76,7 +126,7 @@
     </div>
 
     <!-- Contant information  -->
-    <div class="w-full flex flex-col justify-start items-center my-7 gap-7  " id="conant">
+    <div class="w-full flex flex-col justify-start items-center my-7 gap-7  hidden" id="conant">
         <div
             class="w-[80%]  flex flex-row justify-center items-center bg-gradient-to-r from-[rgb(223,64,6)] to-[rgb(247,141,24)] py-[0.7rem] rounded-full ">
             <span class="text-white text-2xl">Contant Us</span>
@@ -302,7 +352,7 @@
         </div>
     </div>
 
-    <div class="w-full flex flex-col lg:flex-row flex-wrap justify-around items-center  lg:h-64  bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)] my-12"
+    <div class="w-full flex flex-col lg:flex-row flex-wrap justify-around items-center  lg:h-64  bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)] my-12 "
         id="deposite">
 
         <div class="flex flex-row justify-center items-center gap-3 w-[23%] h-40 ">
@@ -1249,7 +1299,7 @@
 
     </div>
 
-    <div class="w-full my-10  flex flex-row justify-center items-center" id="starlineresult">
+    <div class="w-full my-10  flex flex-row justify-center items-center " id="starlineresult">
         <div class="flex flex-col justify-normal items-center w-[90%] gap-6">
             <div class="flex flex-col justify-start items-center">
                 <span class="text-[rgb(0,54,92)] text-3xl font-bold">Online <span
@@ -1446,8 +1496,7 @@
         </div>
     </div>
 
-    <footer
-        class=" overflow-x-hidden w-full flex flex-row justify-center items-center bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)] py-8 ">
+    <footer class=" overflow-x-hidden w-full flex flex-row justify-center items-center bg-gradient-to-r from-[rgb(95,0,132)] to-[rgb(140,0,123)] py-8  " id="footer">
 
         <div class="flex flex-col justify-start items-center w-[90%] gap-8">
 
